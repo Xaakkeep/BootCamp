@@ -4,8 +4,8 @@ using System.Diagnostics;
 
 int[] array = 1_000_000.Create()
                 .Fill(1, 10, 100);
-// Console.WriteLine("-----------------------");
-// array.ConvertToStringAndPrintToTerminal();
+Console.WriteLine("----------------------------");
+array.ConvertToStringAndPrintToTerminal();
 // int mm; 
 // int.TryParse(Console.ReadLine()!, out int mm);
 int m = 10_000;
