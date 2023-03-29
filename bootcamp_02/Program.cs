@@ -1,27 +1,25 @@
-﻿using System.Diagnostics;
-
+﻿// using static RandomArray;
+// using static ArraySum;
+using System.Diagnostics;
 
 int[] array = 1_000_000.Create()
-                .Fill(1, 10);
+                .Fill(1, 10, 100);
+// Console.WriteLine("-----------------------");
 // array.ConvertToStringAndPrintToTerminal();
-
-
-
+// int mm; 
+// int.TryParse(Console.ReadLine()!, out int mm);
 int m = 10_000;
 Stopwatch sw = new Stopwatch();
 sw.Start();
-
 int max = array.BadGetSum(m);
 sw.Stop();
-
-Console.WriteLine($"BadGetSum: {max} => {sw.ElapsedMilliseconds}");
-
+Console.WriteLine($"----------------------------\nBadGetSum: {max} => {sw.ElapsedMilliseconds}\n");
 sw.Reset();
+
 sw.Start();
-max = array.GoodGetSum(m);
+int max2 = array.BestGetSum(m);
 sw.Stop();
-Console.WriteLine($"GoodGetSum: {max} => {sw.ElapsedMilliseconds}");
+Console.Write($"BestGetSum: {max2} => {sw.ElapsedMilliseconds}\n----------------------------\n");
 
-// Console.WriteLine(array.ConvertToString());
-
-
+// array.ConvertToStringAndPrintToTerminal();
+// Console.WriteLine("-----------------------");
